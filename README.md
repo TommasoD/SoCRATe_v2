@@ -1,12 +1,5 @@
 # SoCRATe
-D. Azzalini, F. Azzalini, C. Criscuolo, T. Dolci, D. Martinenghi and S. Amer-Yahia  
-*SoCRATe: A Recommendation System with Limited-Availability Items*  
-Published at [CIKM 2022](https://www.cikm2022.org/).
-
-Try out the UI of the SoCRATe available at this link: https://github.com/chiaracriscuolo/SoCRATe-UI
-
-## Abstract
-We demonstrate SoCRATe, an online system dedicated to providing adaptive recommendations to users when items have limited availability. SoCRATe is relevant to several real-world applications, among which movie and task recommendations. SoCRATe has several appealing features: (i) watching users as they consume recommendations and accounting for user feedback in refining recommendations in the next round; (ii) implementing loss compensation strategies to make up for sub-optimal recommendations, in terms of accuracy, when items have limited availability; (iii) deciding when to re-generate recommendations on a need-based fashion. SoCRATe accommodates real users as well as simulated users to enable testing multiple recommendation choice models. To frame evaluation, SoCRATe introduces a new set of measures that capture recommendation accuracy, user satisfaction and item consumption over time. All these features make SoCRATe unique and able to adapt recommendations to user preferences in a resource-limited setting.
+SoCRATe is a framework to provide adaptive recommendations to users when items have limited availability. SoCRATe is relevant to several real-world applications, among which movie and task recommendations. SoCRATe has several appealing features: (i) watching users as they consume recommendations and accounting for user feedback in refining recommendations in the next round; (ii) implementing loss compensation strategies to make up for sub-optimal recommendations, in terms of accuracy, when items have limited availability; (iii) deciding when to re-generate recommendations on a need-based fashion. SoCRATe accommodates real users as well as simulated users to enable testing multiple recommendation choice models. To frame evaluation, SoCRATe introduces a new set of measures that capture recommendation accuracy, user satisfaction and item consumption over time. All these features make SoCRATe unique and able to adapt recommendations to user preferences in a resource-limited setting.
 
 ## Description
 This repository contains the code for SoCRATe, and it allows to simulate compensation strategies on real-world and synthetic datasets, in a limited availability of items scenario.
@@ -30,18 +23,8 @@ The system computes the optimal user recommendations, the utility matrix and the
 The first time, you can compute them directly in the system, by uncommenting lines 104-109. Resulting files are automatically saved under the folder `obj_functions`.  
 Files for the synthetic and the *Task Recommendation* datasets are provided.
 
-## References
-If you find this work useful, please consider citing it:
-```
-@inproceedings{azzalini2022cikm,
-  author = {Azzalini, Davide and Azzalini, Fabio and Criscuolo, Chiara and Dolci, Tommaso and Martinenghi, Davide and Amer-Yahia, Sihem},
-  title = {So{CRAT}e: A Recommendation System with Limited-Availability Items},
-  year = {2022},
-  publisher = {ACM},
-  booktitle = {Proceedings of the 31st ACM International Conference on Information and Knowledge Management},
-  pages = {4793–4797}
-}
-```
+## Brute-force Comparison Execution
+Add...
 
 ## Contacts
 Please feel free to contact us for any question at <tommaso.dolci@polimi.it>
