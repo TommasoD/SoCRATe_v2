@@ -23,7 +23,7 @@ parser.add_argument("--availability", type=int, default=1)
 parser.add_argument("--iterations", type=int, default=15)
 parser.add_argument("--m", type=int, default=20)
 parser.add_argument("--run", type=int, default='1000000')
-parser.add_argument("--compensation", type=str, default='item', choices=['item', 'user'])
+parser.add_argument("--compensation", type=str, default='round_robin', choices=['round_robin', 'pref_driven'])
 parser.add_argument("--power_law", type=bool, default=False)
 parser.add_argument("--adoption", type=str, default='top_k', choices=['top_k', 'random', 'utility'])
 parser.add_argument("--granularity", type=str, default='fix', choices=['fix', 'group'])
@@ -42,7 +42,7 @@ K = 3  # adopted items
 MIN_ITEMS = N_USERS * (K * (T - 1) + N)  # minimum amount of items necessary
 N_ITEMS = math.ceil(2 * MIN_ITEMS / AVAILABILITY)  # number of items in the system
 
-assignment_strategy = params.compensation
+assignment_strategy = "item" if params.compensation == "round_robin" else "user"
 choice_model_option = params.adoption
 granularity = params.granularity
 logging = params.log

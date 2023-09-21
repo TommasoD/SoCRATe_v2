@@ -250,44 +250,44 @@ print('Average mean SoCRATe: {:.5f}'.format(np.mean(s_mean)))
 print('Deviation mean SoCRATe: {:.5f}'.format(np.std(s_mean)))
 
 # Save diagrams
-# try:
-#     path = "./oracle/oracle-" + str(N_USERS) + "u-" + str(T) + "iter-" + str(mean_availability) + "av-1000000r-" + \
-#            assignment_strategy + "-" + choice_model_option + "-" + time_granularity
-#     title = str(N_USERS) + "u-" + str(T) + "iter-" + str(mean_availability) + "av-1000000r-" + assignment_strategy + \
-#             "-" + choice_model_option + "-" + time_granularity
-#     if power_law:
-#         path = path + "-PL"
-#         title = title + "-PL"
-#     path_std = path + "-std_dev.json"
-#     path_mean = path + "-mean.json"
-#     print("\nFile path: ", path)
-#     oracle_plot(path_std, title, np.mean(s_std))
-#     distribution_plot(path_std, title, np.mean(s_std), 'Average Std-Dev')
-#     # distribution_plot(path_mean, title, np.mean(s_mean), 'Average Mean')
-#
-#     if logging:
-#         # load oracle runs
-#         with open(path_std) as json_file:
-#             std_oracle = json.load(json_file)
-#         with open(path_mean) as json_file:
-#             mean_oracle = json.load(json_file)
-#
-#         support1 = list(np.mean([el for el in sublist]) for sublist in mean_oracle)
-#         support2 = list(np.std([el for el in sublist]) for sublist in mean_oracle)
-#         support3 = list(np.mean([el for el in sublist]) for sublist in std_oracle)
-#         support4 = list(np.std([el for el in sublist]) for sublist in std_oracle)
-#
-#         print('\n---AVERAGE OF MEANS---\nMinimum: ', min(support1), 'Maximum: ', max(support1), 'Mean: ',
-#               np.mean(support1))
-#         print('---STD_DEV OF MEANS---\nMinimum: ', min(support2), 'Maximum: ', max(support2), 'Mean: ',
-#               np.mean(support2))
-#         print('\n---AVERAGE OF STD_DEV---\nMinimum: ', min(support3), 'Maximum: ', max(support3), 'Mean: ',
-#               np.mean(support3))
-#         print('---STD_DEV OF STD_DEV---\nMinimum: ', min(support4), 'Maximum: ', max(support4), 'Mean: ',
-#               np.mean(support4))
-#
-# except FileNotFoundError:
-#     print("No oracle experiment found.")
+try:
+    path = "./oracle/oracle-" + str(N_USERS) + "u-" + str(T) + "iter-" + str(mean_availability) + "av-1000000r-" + \
+           assignment_strategy + "-" + choice_model_option + "-" + time_granularity
+    title = str(N_USERS) + "u-" + str(T) + "iter-" + str(mean_availability) + "av-1000000r-" + assignment_strategy + \
+            "-" + choice_model_option + "-" + time_granularity
+    if power_law:
+        path = path + "-PL"
+        title = title + "-PL"
+    path_std = path + "-std_dev.json"
+    path_mean = path + "-mean.json"
+    print("\nFile path: ", path)
+    oracle_plot(path_std, title, np.mean(s_std))
+    distribution_plot(path_std, title, np.mean(s_std), 'Average Std-Dev')
+    # distribution_plot(path_mean, title, np.mean(s_mean), 'Average Mean')
+
+    if logging:
+        # load oracle runs
+        with open(path_std) as json_file:
+            std_oracle = json.load(json_file)
+        with open(path_mean) as json_file:
+            mean_oracle = json.load(json_file)
+
+        support1 = list(np.mean([el for el in sublist]) for sublist in mean_oracle)
+        support2 = list(np.std([el for el in sublist]) for sublist in mean_oracle)
+        support3 = list(np.mean([el for el in sublist]) for sublist in std_oracle)
+        support4 = list(np.std([el for el in sublist]) for sublist in std_oracle)
+
+        print('\n---AVERAGE OF MEANS---\nMinimum: ', min(support1), 'Maximum: ', max(support1), 'Mean: ',
+              np.mean(support1))
+        print('---STD_DEV OF MEANS---\nMinimum: ', min(support2), 'Maximum: ', max(support2), 'Mean: ',
+              np.mean(support2))
+        print('\n---AVERAGE OF STD_DEV---\nMinimum: ', min(support3), 'Maximum: ', max(support3), 'Mean: ',
+              np.mean(support3))
+        print('---STD_DEV OF STD_DEV---\nMinimum: ', min(support4), 'Maximum: ', max(support4), 'Mean: ',
+              np.mean(support4))
+
+except FileNotFoundError:
+    print("No oracle experiment found.")
 
 seconds = (time.time() - start_time)
 print("\n---EXECUTION TIME: %s ---" % convert(seconds))
