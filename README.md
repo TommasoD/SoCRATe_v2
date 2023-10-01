@@ -18,6 +18,7 @@ Different parameters for the simulation can be selected. Among them:
 
 Additionally, the number of iterations to be analysed and the mean item availability can be selected as parameters.
 Selecting the option for the synthetic dataset allows to also choose the number of items and users. The synthetic dataset is generated at runtime, but large synthetic datasets can also be saved in the under the `dataset` folder.
+
 Simulation output is saved in `system_output` under a sub-folder named after the chosen simulation options (e.g., synth-T5-Aitem-Ctop_k-Shistorical for a 5 iterations simulation, with assignment of items according to round-robin compensation strategy (`item`), choice model `top_k`, sorting option `historical`). Two illustrative simulation outputs are available in this repository, reporting the execution of the system iteration by iteration.  
 
 ## First Time Simulation
@@ -38,4 +39,4 @@ to allow the system to compare SoCRATe with the brute-force approach, you first 
 Plots and logs are saved under the `oracle` folder.
 
 ## Contacts
-Please feel free to contact us at: <davide.azzalini@polimi.it>, <fabio.azzalini@polimi.it>, <chiara criscuolo@polimi.it>, <tommaso.dolci@polimi.it>.
+Please feel free to contact us at: <davide.azzalini@polimi.it>, <fabio.azzalini@polimi.it>, <chiara.criscuolo@polimi.it>, <tommaso.dolci@polimi.it>.
