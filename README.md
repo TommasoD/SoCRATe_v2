@@ -28,15 +28,16 @@ Files for the *Task Recommendation* dataset are provided.
 
 ## Brute-force Comparison Execution
 To test the optimality of our solution, we designed a brute-force strategy that considers all possible orderings of users at each iteration to find the best one, i.e., the one that yields the highest loss compensation.
-The execution is expected to be costly in terms of execution time, since it executes a high number of runs, but its best run is expected to be optimal or close to optimal.
+The execution is expected to be costly in terms of execution time, since it executes a high number of runs, but its best run is expected to be optimal or close to the optimal.
 
-To replicate this experiment, the file to be executed is `oracle.py`, again from command line.
-The additional parameter `run` is available, to limit the number of runs when the possible combinations of users at each iteration becomes too large.
-Our experiments considered 1000000 randomly selected runs.  
+To replicate this experiment, you can execute the file `oracle.py`, again from command line.
+The additional parameter `run` is available, meant to limit the number of runs when the number of combinations of users for each iteration becomes too computationally expensive.
+Our experiments considered a statistically significant 1000000 randomly selected runs.  
 
-The system also saves logs and plots of the execution, comparing brute-force runs with an instance of SoCRATe with the same parameter configuration.
-to allow the system to compare SoCRATe with the brute-force approach, you first need to execute SoCRATe from `orchestrator.py`, then execute `oracle.py`.
-Plots and logs are saved under the `oracle` folder.
+Finally, the system saves logs and plots of the execution, comparing brute-force runs with the corresponding instance of SoCRATe with the same parameter configuration.
+To allow the system to compare SoCRATe with the brute-force approach, be careful to first execute SoCRATe from `orchestrator.py`, then execute `oracle.py` with the same configuration.
+This allows the system to retrieve the correct results and make an appropriate comparison.
+Plots and logs are saved under the `oracle` folder, where you can also find two predefined examples.
 
 ## Contacts
-Please feel free to contact us at: <davide.azzalini@polimi.it>, <fabio.azzalini@polimi.it>, <chiara.criscuolo@polimi.it>, <tommaso.dolci@polimi.it>.
+Please feel free to contact us at: <davide.azzalini@polimi.it>, <fabio.azzalini@polimi.it>, <chiara.criscuolo@polimi.it>, <tommaso.dolci@lero.ie>.
